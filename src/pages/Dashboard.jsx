@@ -2,7 +2,7 @@ import React from "react";
 import { FaBoxes, FaChartBar, FaClock, FaTruck } from "react-icons/fa";
 
 import StatCard from "../Components/StatCard";
-import SideBar from "../Components/sideBar";
+import SideBar from  "../Components/SideBar";
 import ProductionTable from "../Components/productionTable";
 import TopBar from "../Components/TopBar";
 const Dashboard = () => {
