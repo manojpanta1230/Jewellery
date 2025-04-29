@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SideBar from "../../Components/sideBar";
+import SideBar from "../../Components/SideBar";
 import TopBar from "../../Components/TopBar";
 import { FaPlus, FaMinus } from "react-icons/fa";
 

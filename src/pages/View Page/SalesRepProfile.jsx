@@ -1,6 +1,6 @@
 import React from "react";
 import { FaEye, FaEdit } from "react-icons/fa";
-import SideBar from "../../Components/sideBar";
+import SideBar from "../../Components/SideBar";
 import TopBar from "../../Components/TopBar";
 import { Link } from "react-router-dom";
 
