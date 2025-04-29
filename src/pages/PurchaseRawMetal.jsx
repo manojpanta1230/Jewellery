@@ -47,10 +47,10 @@ const PurchaseRawMetal = () => {
 
           {/* Top Inputs */}
           <div className="grid grid-cols-3 gap-4 bg-white p-4 rounded-lg mb-6 shadow">
-            <input type="date" className="border p-2 rounded" placeholder="Choose Date" />
-            <input type="text" className="border p-2 rounded" placeholder="Purchase Invoice" />
+            <input type="date" className="bg-gray-200 p-2 rounded" placeholder="Choose Date" />
+            <input type="text" className="bg-gray-200 p-2 rounded" placeholder="Purchase Invoice" />
             <div className="flex gap-2">
-              <input type="text" className="border p-2 rounded w-full" placeholder="Choose Vendor" />
+              <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Choose Vendor" />
               <button
                 className="bg-green-600 text-white px-4 py-2 rounded"
                 onClick={() => setShowVendorForm(true)}
@@ -68,35 +68,35 @@ const PurchaseRawMetal = () => {
                   type="text"
                   value={row.metal}
                   onChange={(e) => handleInputChange(index, "metal", e.target.value)}
-                  className="border p-2 rounded"
+                  className="bg-gray-200 p-2 rounded"
                   placeholder="Choose Metal"
                 />
                 <input
                   type="text"
                   value={row.carat}
                   onChange={(e) => handleInputChange(index, "carat", e.target.value)}
-                  className="border p-2 rounded"
+                  className="bg-gray-200 p-2 rounded"
                   placeholder="CT"
                 />
                 <input
                   type="number"
                   value={row.weight}
                   onChange={(e) => handleInputChange(index, "weight", e.target.value)}
-                  className="border p-2 rounded"
+                  className="bg-gray-200 p-2 rounded"
                   placeholder="Weight"
                 />
                 <input
                   type="number"
                   value={row.rate}
                   onChange={(e) => handleInputChange(index, "rate", e.target.value)}
-                  className="border p-2 rounded"
+                  className=" bg-gray-200 p-2 rounded"
                   placeholder="Buying Rate"
                 />
                 <input
                   type="text"
                   value={row.amount}
                   readOnly
-                  className="border p-2 rounded bg-gray-100"
+                  className=" p-2 rounded bg-gray-200"
                   placeholder="Total Cost Price"
                 />
                 <div className="flex gap-2">
@@ -115,16 +115,16 @@ const PurchaseRawMetal = () => {
 
           {/* Additional Charges and Remarks */}
           <div className="grid grid-cols-2 gap-4 bg-white p-4 rounded-lg shadow mb-6">
-            <input type="text" className="border p-2 rounded" placeholder="Additional Charges" />
-            <input type="text" className="border p-2 rounded" placeholder="Reason for Additional Charges" />
+            <input type="text" className="p-2 rounded bg-gray-200" placeholder="Additional Charges" />
+            <input type="text" className=" bg-gray-200 p-2 rounded " placeholder="Reason for Additional Charges" />
           </div>
 
           {/* Subtotal, Tax, Grand Total */}
           <div className="grid grid-cols-2 gap-4 bg-white p-4 rounded-lg shadow mb-6">
-            <input type="text" className="border p-2 rounded" placeholder="Sub-Total" />
-            <input type="text" className="border p-2 rounded" placeholder="Tax (if any)" />
-            <input type="text" className="border p-2 rounded" placeholder="Grand Total" />
-            <input type="text" className="border p-2 rounded" placeholder="Purchase Remark" />
+            <input type="text" className=" bg-gray-200 p-2 rounded" placeholder="Sub-Total" />
+            <input type="text" className=" bg-gray-200 p-2 rounded" placeholder="Tax (if any)" />
+            <input type="text" className="  bg-gray-200 p-2 rounded" placeholder="Grand Total" />
+            <input type="text" className="  bg-gray-200 p-2 rounded" placeholder="Purchase Remark" />
           </div>
 
           {/* Save Button */}
@@ -144,35 +144,35 @@ const PurchaseRawMetal = () => {
 
               <h2 className="text-2xl font-bold mb-6">Add New Supplier</h2>
 
-              <div className="space-y-4">
-                <input type="file" className="border p-2 rounded w-full" placeholder="Image Upload" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="Purchase Invoice" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="Full Title" />
-                <input type="email" className="border p-2 rounded w-full" placeholder="Email Address" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="Contact Number" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="Address" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="PAN/VAT No" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="Staff Name" />
-                <input type="email" className="border p-2 rounded w-full" placeholder="Staff Email" />
-                <input type="text" className="border p-2 rounded w-full" placeholder="Contact Number" />
-                <select className="border p-2 rounded w-full">
+              <div className="space-y-4 ">
+                <input type="file" className=" p-2 rounded w-full" placeholder="Image Upload" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Purchase Invoice" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Full Title" />
+                <input type="email" className="bg-gray-200  p-2 rounded w-full" placeholder="Email Address" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Contact Number" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Address" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="PAN/VAT No" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Staff Name" />
+                <input type="email" className="bg-gray-200  p-2 rounded w-full" placeholder="Staff Email" />
+                <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Contact Number" />
+                <select className="bg-gray-200 p-2 rounded w-full">
                   <option>Designation</option>
                   <option>Manager</option>
                   <option>Sales Executive</option>
                 </select>
-                <select className="border p-2 rounded w-full">
+                <select className="bg-gray-200   p-2 rounded w-full">
                   <option>Choose Gender</option>
                   <option>Male</option>
                   <option>Female</option>
                 </select>
 
                 <div className="flex gap-4 mt-6">
-                  <button className="bg-green-600 text-white w-full py-2 rounded">
+                  <button className="bg-green-600 text-white w-full py-2 rounded cursor-pointer">
                     Save Changes
                   </button>
                   <button
                     onClick={() => setShowVendorForm(false)}
-                    className="bg-gray-400 text-white w-full py-2 rounded"
+                    className=" text-white w-full py-2 rounded bg-red-500 cursor-pointer"
                   >
                     Cancel
                   </button>

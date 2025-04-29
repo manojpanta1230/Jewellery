@@ -62,7 +62,7 @@ const Karigar = () => {
 
           {/* Filter Bar */}
           <div className="flex flex-wrap gap-4 items-center mb-8 shadow-2xl bg-white p-4 rounded-2xl">
-            <Link to="/add-sales-representative">
+            <Link to="/add-new-karigar">
             <button className="bg-green-600 text-white px-5 py-2 rounded cursor-pointer">
               + Add New Karigar
             </button>
@@ -126,6 +126,7 @@ const Karigar = () => {
                         </span>
                       </td>
                       <td className="py-2 px-4 flex gap-2">
+                        <Link to="/view-salesrepresentatives">
                         <button
                           title="View"
                           onClick={() => handleView(rep)}
@@ -133,7 +134,7 @@ const Karigar = () => {
                         >
                           <FiEye size={20} />
                         </button>
-                        <Link to="/add"></Link>
+                        </Link>
                         <button title="Edit" className="text-blue-600 hover:text-blue-800 cursor-pointer"><FiEdit/></button>
                         <button title="Delete" className="text-red-600 hover:text-red-800 cursor-pointer"><FiTrash/></button>
                       </td>
@@ -145,7 +146,7 @@ const Karigar = () => {
           </div>
 
           {/* Modal Popup */}
-          {openModal && selectedRep && (
+          {/* {openModal && selectedRep && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
               <div className="bg-white rounded-lg p-6 w-96 relative">
                 <button
@@ -183,7 +184,7 @@ const Karigar = () => {
                 </Link>
               </div>
             </div>
-          )}
+          )} */}
         </main>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SideBar from "../Components/sideBar";
-import TopBar from "../Components/TopBar";
+import SideBar from "../../Components/sideBar";
+import TopBar from "../../Components/TopBar";
 import { Link } from "react-router-dom";
 const AddSalesRepresentative = () => {
   const [formData, setFormData] = useState({

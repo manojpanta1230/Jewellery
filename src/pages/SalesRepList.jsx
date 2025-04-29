@@ -40,18 +40,8 @@ const salesRepresentatives = [
 ];
 
 const SalesRepList = () => {
-  const [openModal, setOpenModal] = useState(false);
-  const [selectedRep, setSelectedRep] = useState(null);
 
-  const handleView = (rep) => {
-    setSelectedRep(rep);
-    setOpenModal(true);
-  };
 
-  const handleClose = () => {
-    setOpenModal(false);
-    setSelectedRep(null);
-  };
 
   return (
     <div className="flex">
@@ -127,15 +117,17 @@ const SalesRepList = () => {
                         </span>
                       </td>
                       <td className="py-2 px-4 flex gap-2">
+                        <Link to="/view-salesrepresentatives">
                         <button
                           title="View"
-                          onClick={() => handleView(rep)}
+                        
                           className="text-gray-700 hover:text-black cursor-pointer"
                         >
                           <FiEye className="text-lg" />
                         </button>
-                        <Link to="/add"></Link>
-                        <button title="Edit" className="text-blue-600 hover:text-blue-800 cursor-pointer"><FiEdit/></button>
+                        </Link>
+                        <Link to="/add-sales-representative">
+                        <button title="Edit" className="text-blue-600 hover:text-blue-800 cursor-pointer"><FiEdit/></button></Link>
                         <button title="Delete" className="text-black   hover:text-red-800 cursor-pointer"><FiTrash/></button>
                       </td>
                     </tr>
@@ -146,7 +138,7 @@ const SalesRepList = () => {
           </div>
 
           {/* Modal Popup */}
-          {openModal && selectedRep && (
+          {/* {openModal && selectedRep && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
               <div className="bg-white rounded-lg p-6 w-96 relative">
                 <button
@@ -184,7 +176,7 @@ const SalesRepList = () => {
                 </Link>
               </div>
             </div>
-          )}
+          )} */}
         </main>
       </div>
     </div>
