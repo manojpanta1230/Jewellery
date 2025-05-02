@@ -1,56 +1,27 @@
 import React, { useState } from "react";
-import SideBar from "../Components/SideBar";
-import TopBar from "../Components/TopBar";
+import SideBar from "../../Components/SideBar";
+import TopBar from "../../Components/TopBar"; 
 import { Link } from "react-router-dom";
 import { FiEye, FiEdit,FiTrash} from 'react-icons/fi'
+
 const salesRepresentatives = [
   {
-    code: "SR021",
-    fullName: "Susmita Sahi Thakjuri",
-    email: "susmita2025@gmail.com",
-    contact: "+977 9854856987",
-    designation: "Sales Representative",
-    address: "Kathmandu Nepal",
-    status: "Active",
-    removed: "FALSE",
-    dob: "25th December 2081",
-    gender: "Female",
-    createdBy: "Admin Name",
-    createdDate: "3rd July 2025",
-    modifiedBy: "Username",
-    lastModifiedDate: "5th September 2025",
+    productionDate: "2025-05-01",
+    PInvoice: "INV001",
+    ProductionStatus: "Completed",
+    SettlementStatus: "Settled",
   },
   {
-    code: "SR125",
-    fullName: "Ram Kumar Pandey",
-    email: "ramkumar@gmail.com",
-    contact: "+977 9856985697",
-    designation: "Sales Representative",
-    address: "Narephat Kathmandu Nepal",
-    status: "In Active",
-    removed: "FALSE",
-    dob: "50th February 1991",
-    gender: "Male",
-    createdBy: "Admin Name",
-    createdDate: "5th May 2025",
-    modifiedBy: "Username",
-    lastModifiedDate: "7th September 2025",
+    productionDate: "2025-05-02", 
+    PInvoice: "INV002",
+    ProductionStatus: "In Progress",
+    SettlementStatus: "Pending",
   },
 ];
 
-const Karigar = () => {
-  const [openModal, setOpenModal] = useState(false);
-  const [selectedRep, setSelectedRep] = useState(null);
+const AcSettlement = () => {
 
-  const handleView = (rep) => {
-    setSelectedRep(rep);
-    setOpenModal(true);
-  };
 
-  const handleClose = () => {
-    setOpenModal(false);
-    setSelectedRep(null);
-  };
 
   return (
     <div className="flex">
@@ -60,83 +31,68 @@ const Karigar = () => {
         <main className="p-8 bg-gray-100 min-h-screen">
           <h1 className="text-2xl font-bold mb-6">SALES REPRESENTATIVE LIST</h1>
 
-          {/* Filter Bar */}
-          <div className="flex flex-wrap gap-4 items-center mb-8 shadow-2xl bg-white p-4 rounded-2xl">
-            <Link to="/add-new-karigar">
-            <button className="bg-green-600 text-white px-5 py-2 rounded cursor-pointer">
-              + Add New Karigar
-            </button>
-            </Link>
-            <input
-              type="text"
-              placeholder="Karigar Full Name"
-              className="border p-2 rounded w-52"
-            />
-            <input
-              type="date"
-              className="border p-2 rounded w-48"
-            />
-            <button className="bg-green-600 text-white px-5 py-2 rounded">
-              Filter
-            </button>
-            <button className="bg-gray-200 text-black px-5 py-2 rounded">
-              Reset
-            </button>
-          </div>
-
+  
           {/* Table */}
           <div className="bg-white rounded shadow p-6">
-            <h2 className="text-lg font-semibold mb-4">
-              All Karigars
+            <div className=" flex justify-between" >
+            <h2 className="text-lg font-semibold mb-4 text-start">
+              Karigar Account History/Settlement
             </h2>
+            <h2 className="text-lg font-bold mb-4 flex text-end text-green-500">Mahendra Silwal</h2>
+            </div>
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm">
                 <thead className="border-b">
                   <tr className="text-left">
-                    <th className="py-2 px-4 font-semibold">Code</th>
-                    <th className="py-2 px-4 font-semibold">Full Name</th>
-                    <th className="py-2 px-4 font-semibold">Email</th>
-                    <th className="py-2 px-4 font-semibold">Contact</th>
-                    <th className="py-2 px-4 font-semibold">Address</th>
-                    <th className="py-2 px-4 font-semibold">DOB</th>
-                    <th className="py-2 px-4 font-semibold">Gender</th>
-                    <th className="py-2 px-4 font-semibold">Status</th>
+                    <th className="py-2 px-4 font-semibold">Production Date</th>
+                    <th className="py-2 px-4 font-semibold">Pinvoice</th>
+                    <th className="py-2 px-4 font-semibold">Production Status</th>
+                    <th className="py-2 px-4 font-semibold">Settlement Status </th>
+                
                     <th className="py-2 px-4 font-semibold">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {salesRepresentatives.map((rep, index) => (
                     <tr key={index} className="border-b hover:bg-gray-50">
-                      <td className="py-2 px-4">{rep.code}</td>
-                      <td className="py-2 px-4">{rep.fullName}</td>
-                      <td className="py-2 px-4">{rep.email}</td>
-                      <td className="py-2 px-4">{rep.contact}</td>
-                      <td className="py-2 px-4">{rep.address}</td>
-                      <td className="py-2 px-4">{rep.dob}</td>
-                      <td className="py-2 px-4">{rep.gender}</td>
+                      <td className="py-2 px-4">{rep.productionDate}</td>
+                      <td className="py-2 px-4">{rep.PInvoice}</td>
                       <td className="py-2 px-4">
                         <span
                           className={`font-semibold ${
-                            rep.status === "Active"
+                            rep.SettlementStatus === "Settled"
                               ? "text-green-600"
                               : "text-red-600"
                           }`}
                         >
-                          {rep.status}
+                          {rep.SettlementStatus}
+                        </span>
+                      </td>
+                 
+                      <td className="py-2 px-4">
+                        <span
+                          className={`font-semibold ${
+                            rep.ProductionStatus === "Completed"
+                              ? "text-green-600"
+                              : "text-red-600"
+                          }`}
+                        >
+                          {rep.ProductionStatus}
                         </span>
                       </td>
                       <td className="py-2 px-4 flex gap-2">
-                        <Link to="/view-karigar">
+                        <Link to="/karigaraccountdetail">
                         <button
                           title="View"
-                          onClick={() => handleView(rep)}
+                        
                           className="text-gray-700 hover:text-black cursor-pointer"
                         >
-                          <FiEye size={20} />
+                          <FiEye className="text-lg" />
                         </button>
                         </Link>
-                        <button title="Edit" className="text-blue-600 hover:text-blue-800 cursor-pointer"><FiEdit/></button>
-                        <button title="Delete" className="text-red-600 hover:text-red-800 cursor-pointer"><FiTrash/></button>
+                        <Link to="/add-sales-representative">
+                        <button title="Edit" className="text-blue-600 hover:text-blue-800 cursor-pointer"><FiEdit/></button></Link>
+                        <button title="Delete" className="text-black   hover:text-red-800 cursor-pointer"><FiTrash/></button>
                       </td>
                     </tr>
                   ))}
@@ -191,4 +147,4 @@ const Karigar = () => {
   );
 };
 
-export default Karigar;
+export default AcSettlement;

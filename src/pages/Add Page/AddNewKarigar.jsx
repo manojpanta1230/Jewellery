@@ -146,7 +146,7 @@ const AddNewKarigar = () => {
             </form>
 
             <div className="mt-6">
-                <Link to="/sales-representative">
+                <Link to="/karigar">
               <button
                 type="submit"
               

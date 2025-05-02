@@ -53,11 +53,11 @@ const NewProduction = () => {
 
           {/* Top Inputs */}
           <div className="grid grid-cols-4 gap-4 bg-white p-4 rounded-lg mb-6 shadow">
-            <label htmlFor="date"> Date</label>
-            <input type="date" className="border p-2 rounded" placeholder="Choose Date" />
-            <input type="text" className="border p-2 rounded" placeholder="Invoice" />
-            <input type="text" className="border p-2 rounded" placeholder="Order No." />
-            <select className="border p-2 rounded">
+
+            <input type="date" className=" p-2 rounded" placeholder="Choose Date" />
+            <input type="text" className=" p-2 rounded" placeholder="Invoice" />
+            <input type="text" className=" p-2 rounded" placeholder="Order No." />
+            <select className=" p-2 rounded">
               <option>Choose Karigar</option>
               <option>Karigar 1</option>
               <option>Karigar 2</option>

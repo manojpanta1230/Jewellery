@@ -131,9 +131,7 @@ const RawMetal = () => {
                       <th className="py-2 px-4 font-semibold">Rate</th>
 
                       {/* ✅ Update this column name */}
-                      <th className="py-2 px-4 font-semibold">
-                        Amount 
-                      </th>
+                      <th className="py-2 px-4 font-semibold">Amount</th>
 
                       <th className="py-2 px-4 font-semibold">Action</th>
                     </tr>
@@ -179,75 +177,50 @@ const RawMetal = () => {
             </div>
           </div>
           {/* Modal Popup */}
+          {/* Right Side Drawer Modal */}
           {openModal && selectedRep && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white rounded-lg p-6 w-96 relative">
-                <button
-                  className="absolute top-2 right-2 text-gray-600"
-                  onClick={handleClose}
-                >
-                  ✖️
-                </button>
-                <h2 className="text-xl font-semibold mb-4 text-green-700">
-                  {selectedRep.fullName}
-                </h2>
-                <div className="space-y-2 text-sm">
-                  <p>
-                    <strong>Code:</strong> {selectedRep.code}
-                  </p>
-                  <p>
-                    <strong>Contact:</strong> {selectedRep.contact}
-                  </p>
-                  <p>
-                    <strong>Email Address:</strong> {selectedRep.email}
-                  </p>
-                  <p>
-                    <strong>Designation:</strong> {selectedRep.designation}
-                  </p>
-                  <p>
-                    <strong>Address:</strong> {selectedRep.address}
-                  </p>
-                  <p>
-                    <strong>Status:</strong>{" "}
-                    <span
-                      className={
-                        selectedRep.status === "Active"
-                          ? "text-green-600"
-                          : "text-red-600"
-                      }
-                    >
-                      {selectedRep.status}
-                    </span>
-                  </p>
-                  <p>
-                    <strong>Removed:</strong> {selectedRep.removed}
-                  </p>
-                  <p>
-                    <strong>Date of Birth:</strong> {selectedRep.dob}
-                  </p>
-                  <p>
-                    <strong>Gender:</strong> {selectedRep.gender}
-                  </p>
-                  <p>
-                    <strong>Created By:</strong> {selectedRep.createdBy}
-                  </p>
-                  <p>
-                    <strong>Created Date:</strong> {selectedRep.createdDate}
-                  </p>
-                  <p>
-                    <strong>Modified By:</strong> {selectedRep.modifiedBy}
-                  </p>
-                  <p>
-                    <strong>Last Modified Date:</strong>{" "}
-                    {selectedRep.lastModifiedDate}
-                  </p>
-                </div>
-                <Link to="/add-sales-representative">
-                  <button className="bg-green-600 text-white w-full py-2 mt-6 rounded cursor-pointer">
-                    Edit
-                  </button>
-                </Link>
+            <div className="absolute top-20 right-10 z-50 w-[380px] bg-white shadow-lg border border-gray-300 p-6 rounded-lg max-h-[85vh] overflow-y-auto">
+              <h2 className="text-lg font-semibold mb-4 border-b pb-2">
+                Raw Metal Log Detail
+              </h2>
+              <div className="space-y-2 text-sm">
+                <p>
+                  <strong>Date:</strong> 2025/05/15
+                </p>
+                <p>
+                  <strong>Heading:</strong> Purchase
+                </p>
+                <p>
+                  <strong>Invoice Code:</strong> Pro/Karigar code
+                </p>
+                <p>
+                  <strong>Supplier:</strong> Vendor/Karigar
+                </p>
+                <p>
+                  <strong>Metal:</strong> GOLD
+                </p>
+                <p>
+                  <strong>Carat:</strong> 24 ct
+                </p>
+                <p>
+                  <strong>Weight:</strong> 5gm
+                </p>
+                <p>
+                  <strong>Rate:</strong> Rs. 1,90,100.00
+                </p>
+                <p>
+                  <strong>Amount:</strong> Rs. 95,050.00
+                </p>
+                <p>
+                  <strong>Remark:</strong> Purchase
+                </p>
               </div>
+              <button
+                onClick={handleClose}
+                className="w-full mt-6 bg-[#eeeafe] text-black py-2 rounded shadow hover:bg-[#dcd6fc]"
+              >
+                OK
+              </button>
             </div>
           )}
         </main>

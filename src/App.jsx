@@ -10,6 +10,10 @@ import PurchaseRawMetal from './pages/PurchaseRawMetal';
 import AddNewKarigar from './pages/Add Page/AddNewKarigar';
 import NewProduction from './pages/Add Page/NewProduction';
 import SalesRepProfile from './pages/View Page/SalesRepProfile';
+import ViewKarigar from './pages/View Page/ViewKarigar';
+import AcSettlement from './pages/View Page/AcSettlement';
+import KarigarAccountDetail from './pages/KarigarAccountDetails';
+import ProductionDetail from './pages/ProductionDetail';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
         <Route path="/add-new-karigar" element={<AddNewKarigar />} />
         <Route path="/new-production" element={<NewProduction />} />
         <Route path="/view-salesrepresentatives" element={<SalesRepProfile />} />
+        <Route path="/view-karigar" element={<ViewKarigar />} />
+        <Route path="/karigar-ac-settlement" element={<AcSettlement />} />
+        <Route path="/karigaraccountdetail" element={<KarigarAccountDetail />} />
+        <Route path="/productiondetails" element={<ProductionDetail />} />
       </Routes>
     </Router>
   );
