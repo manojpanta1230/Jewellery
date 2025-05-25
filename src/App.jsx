@@ -14,6 +14,8 @@ import ViewKarigar from './pages/View Page/ViewKarigar';
 import AcSettlement from './pages/View Page/AcSettlement';
 import KarigarAccountDetail from './pages/KarigarAccountDetails';
 import ProductionDetail from './pages/ProductionDetail';
+import UserProfileCard from './pages/UserProfileCard';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/karigar-ac-settlement" element={<AcSettlement />} />
         <Route path="/karigaraccountdetail" element={<KarigarAccountDetail />} />
         <Route path="/productiondetails" element={<ProductionDetail />} />
+        <Route path="/userprofilecard" element={<UserProfileCard/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </Router>
   );
