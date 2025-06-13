@@ -44,7 +44,7 @@ const SalesRepProfile = () => {
                 <p><strong>Email Address:</strong> shyam@gmail.com</p>
                 <p><strong>Designation:</strong> Sales Representative</p>
                 <p><strong>Address:</strong> Kathmandu Nepal</p>
-                <p><strong>Status:</strong> <span className="text-green-600">Active</span></p>
+                <p><strong>Status:</strong> <span className="text-green-800">Active</span></p>
                 <p><strong>Removed:</strong> FALSE</p>
                 <p><strong>Date of Birth:</strong> 22nd September 1992</p>
                 <p><strong>Gender:</strong> Male</p>
@@ -54,7 +54,7 @@ const SalesRepProfile = () => {
                 <p><strong>Last Modified Date:</strong> 5th September 2025</p>
               </div>
               <Link to="/add-sales-representative">
-              <button className="mt-6 w-full bg-green-600 text-white py-2 rounded-lg text-lg">
+              <button className="mt-6 w-full bg-green-800 text-white py-2 rounded-lg text-lg">
                 Edit
               </button>
               </Link>
@@ -73,7 +73,7 @@ const SalesRepProfile = () => {
                   type="date"
                   className="border p-2 rounded w-40"
                 />
-                <button className="bg-green-600 text-white px-5 py-2 rounded">
+                <button className="bg-green-800  text-white px-5 py-2 rounded">
                   Filter
                 </button>
                 <button className="bg-gray-200 text-black px-5 py-2 rounded">

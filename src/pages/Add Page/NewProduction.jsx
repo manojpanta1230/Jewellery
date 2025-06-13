@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import SideBar from "../../Components/SideBar";
 import TopBar from "../../Components/TopBar";
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -115,7 +115,7 @@ const NewProduction = () => {
                   <option>24 CT</option>
                 </select>
                 <div className="flex gap-2">
-                  <button onClick={addProductRow} className="bg-green-500 text-white p-2 rounded">
+                  <button onClick={addProductRow} className="bg-green-800 text-white p-2 rounded">
                     <FaPlus />
                   </button>
                   {productRows.length > 1 && (
@@ -158,7 +158,7 @@ const NewProduction = () => {
                   placeholder="Given Weight"
                 />
                 <div className="flex gap-2">
-                  <button onClick={addWeightRow} className="bg-green-500 text-white p-2 rounded">
+                  <button onClick={addWeightRow} className="bg-green-800 text-white p-2 rounded">
                     <FaPlus />
                   </button>
                   {givenWeightRows.length > 1 && (
@@ -184,7 +184,7 @@ const NewProduction = () => {
           </div>
 
           {/* Save Changes */}
-          <button className="bg-green-600 text-white w-full py-3 rounded-lg text-lg">
+          <button className="bg-green-800 text-white w-full py-3 rounded-lg text-lg">
             Save Changes
           </button>
         </main>

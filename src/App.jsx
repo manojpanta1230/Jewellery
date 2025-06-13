@@ -6,7 +6,7 @@ import AddSalesRepresentative from './pages/Add Page/AddSalesRepresentative';
 import Karigar from './pages/Karigar';
 import Production from './pages/Production';
 import RawMetal from './pages/RawMetal';
-import PurchaseRawMetal from './pages/PurchaseRawMetal';
+import PurchaseRawMetal from './pages/Add Page/PurchaseRawMetal';
 import AddNewKarigar from './pages/Add Page/AddNewKarigar';
 import NewProduction from './pages/Add Page/NewProduction';
 import SalesRepProfile from './pages/View Page/SalesRepProfile';
@@ -16,6 +16,7 @@ import KarigarAccountDetail from './pages/KarigarAccountDetails';
 import ProductionDetail from './pages/ProductionDetail';
 import UserProfileCard from './pages/UserProfileCard';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
         <Route path="/karigaraccountdetail" element={<KarigarAccountDetail />} />
         <Route path="/productiondetails" element={<ProductionDetail />} />
         <Route path="/userprofilecard" element={<UserProfileCard/>} />
-        <Route path="/login" element={<Login/>} />
+        <Route path="/login" element={<Login/>} /> 
+        <Route path="/signup" element={<SignUp/>} /> 
       </Routes>
     </Router>
   );

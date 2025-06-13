@@ -165,7 +165,7 @@ const AddSalesRepresentative = () => {
               <button
                 type="submit"
               
-                className="bg-green-600 text-white px-8 py-2 rounded hover:bg-green-700"
+                className="bg-green-800 text-white px-8 py-2 rounded hover:bg-green-700"
               >
                 Save
               </button>

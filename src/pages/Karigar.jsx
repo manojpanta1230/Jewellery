@@ -63,7 +63,7 @@ const Karigar = () => {
           {/* Filter Bar */}
           <div className="flex flex-wrap gap-4 items-center mb-8 shadow-2xl bg-white p-4 rounded-2xl">
             <Link to="/add-new-karigar">
-            <button className="bg-green-600 text-white px-5 py-2 rounded cursor-pointer">
+            <button className="bg-green-800 text-white px-5 py-2 rounded cursor-pointer">
               + Add New Karigar
             </button>
             </Link>
@@ -76,7 +76,7 @@ const Karigar = () => {
               type="date"
               className="border p-2 rounded w-48"
             />
-            <button className="bg-green-600 text-white px-5 py-2 rounded">
+            <button className="bg-green-800 text-white px-5 py-2 rounded">
               Filter
             </button>
             <button className="bg-gray-200 text-black px-5 py-2 rounded">

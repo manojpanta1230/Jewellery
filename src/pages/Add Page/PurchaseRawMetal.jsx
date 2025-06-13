@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SideBar from "../Components/SideBar";
-import TopBar from "../Components/TopBar";
+import SideBar from "../../Components/SideBar";
+import TopBar from "../../Components/TopBar";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 const PurchaseRawMetal = () => {
@@ -52,7 +52,7 @@ const PurchaseRawMetal = () => {
             <div className="flex gap-2">
               <input type="text" className="bg-gray-200 p-2 rounded w-full" placeholder="Choose Vendor" />
               <button
-                className="bg-green-600 text-white px-4 py-2 rounded"
+                className="bg-green-800 text-white px-4 py-2 rounded"
                 onClick={() => setShowVendorForm(true)}
               >
                 New Vendor
@@ -100,7 +100,7 @@ const PurchaseRawMetal = () => {
                   placeholder="Total Cost Price"
                 />
                 <div className="flex gap-2">
-                  <button onClick={handleAddRow} className="bg-green-500 text-white p-2 rounded">
+                  <button onClick={handleAddRow} className="bg-green-800 text-white p-2 rounded">
                     <FaPlus />
                   </button>
                   {metalRows.length > 1 && (
@@ -128,7 +128,7 @@ const PurchaseRawMetal = () => {
           </div>
 
           {/* Save Button */}
-          <button className="bg-green-600 text-white w-full py-3 rounded-lg text-lg">
+          <button className="bg-green-800 text-white w-full py-3 rounded-lg text-lg">
             Save Changes
           </button>
 
@@ -167,7 +167,7 @@ const PurchaseRawMetal = () => {
                 </select>
 
                 <div className="flex gap-4 mt-6">
-                  <button className="bg-green-600 text-white w-full py-2 rounded cursor-pointer">
+                  <button className="bg-green-800 text-white w-full py-2 rounded cursor-pointer">
                     Save Changes
                   </button>
                   <button

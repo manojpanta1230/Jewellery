@@ -64,54 +64,52 @@ const RawMetal = () => {
       <SideBar />
       <div className="flex-1">
         <TopBar />
-        <main className="p-8 bg-gray-100 min-h-screen">
-          <h1 className="text-2xl font-bold mb-6">RAW METAL RECORDS</h1>
-
-          {/* Filter Bar */}
-          <div className="flex flex-wrap gap-4 items-center mb-8 shadow-2xl bg-white p-4 rounded-2xl">
-            <Link to="/add-metal">
-              <button className="bg-green-600 text-white px-5 py-2 rounded cursor-pointer">
-                Add Metal
-              </button>
-            </Link>
-            <input
-              type="text"
-              placeholder="Invoice"
-              className="bg-gray-200 text-black px-5 py-2 rounded"
-            />
-            <input type="date" className="border p-2 rounded w-48" />
-            <button className="bg-green-600 text-white px-5 py-2 rounded">
-              Filter
-            </button>
-            <button className="bg-gray-200 text-black px-5 py-2 rounded">
-              Reset
-            </button>
+         <h1 className="text-2xl font-bold mb-6 mt-10 ml-10">RAW METAL RECORDS</h1>
+        <main className="p-5 bg-gray-100 min-h-screen flex">
+          <div className="bg-white min-h-screen w-1/4 shadow-orange-100 rounded-2xl  ">
+            <h1 className="text-3xl font-bold mb-6 text-center text-black-700 p-3 border-b-1    ">
+              Total Available Stock
+            </h1>
+            <table className="min-w-full text-sm">
+              <thead>
+                <tr className="text-left">
+                  <th className="py-2 px-4 font-semibold">Metal</th>
+                  <th className="py-2 px-4 font-semibold">Carat </th>
+                  <th className="py-2 px-4 font-semibold">Weight </th>
+                </tr>
+              </thead>
+              <tbody>
+                {metalValue.map((rep, index) => (
+                  <tr key={index} className=" hover:bg-gray-50">
+                    <td className="py-2 px-4">{rep.metal}</td>
+                    <td className="py-2 px-4">{rep.carat}</td>
+                    <td className="py-2 px-4">{rep.weight}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           {/* Table */}
-          <div className=" flex min-h-full width-full gap-5">
-            <div className="bg-white min-h-screen w-1/4 shadow-orange-100 rounded-2xl">
-              <h1 className="text-3xl font-bold mb-6 text-center text-black-700 p-4 border-b-1    ">
-                Total Available Stock
-              </h1>
-              <table className="min-w-full text-sm">
-                <thead>
-                  <tr className="text-left">
-                    <th className="py-2 px-4 font-semibold">Metal</th>
-                    <th className="py-2 px-4 font-semibold">Carat </th>
-                    <th className="py-2 px-4 font-semibold">Weight </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {metalValue.map((rep, index) => (
-                    <tr key={index} className=" hover:bg-gray-50">
-                      <td className="py-2 px-4">{rep.metal}</td>
-                      <td className="py-2 px-4">{rep.carat}</td>
-                      <td className="py-2 px-4">{rep.weight}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          <div className=" flex min-h-full width-full  flex-col p-5">
+            <div className="flex flex-wrap gap-4 items-center justify-around mb-8 shadow-2xl bg-white p-4 rounded-2xl">
+              <Link to="/add-metal">
+                <button className="bg-green-800 text-white px-5 py-2 rounded cursor-pointer">
+                  Add Metal
+                </button>
+              </Link>
+              <input
+                type="text"
+                placeholder="Invoice"
+                className="bg-gray-200 text-black px-5 py-2 rounded"
+              />
+              <input type="date" className="border p-2 rounded w-48" />
+              <button className="bg-green-800 text-white px-5 py-2 rounded">
+                Filter
+              </button>
+              <button className="bg-gray-200 text-black px-5 py-2 rounded">
+                Reset
+              </button>
             </div>
             <div className="bg-white rounded shadow p-6">
               <h2 className="text-lg font-semibold mb-4">
